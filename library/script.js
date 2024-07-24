@@ -45,8 +45,45 @@ function addBookToLibrary(event) {
 
     document.getElementById('bookform').reset()
 
+    displayBooks()
+
 
 }
 
+function displayBooks() {
+    const library = document.getElementById('library')
+    library.innerHTML = '';
+
+    myLibrary.forEach(book => {
+        
+        const bookCard = document.createElement('div')
+        bookCard.classList.add('book-card')
+
+        const bookTitle = document.createElement('h3');
+        bookTitle.textContent = book.title;
+
+        const bookAuthor = document.createElement('p');
+        bookAuthor.textContent = `by ${book.author}`;
+
+        const bookStatus = document.createElement('p');
+        bookStatus.textContent = `status: ${book.status}`;
+
+
+     
+
+        bookCard.appendChild(bookTitle)
+        bookCard.appendChild(bookAuthor)
+        bookCard.appendChild(bookStatus)
+       
+
+        library.appendChild(bookCard)
+
+
+            
+
+        })
+   
+}
+    
 
 
