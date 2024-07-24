@@ -69,12 +69,15 @@ function displayBooks() {
         bookStatus.textContent = `status: ${book.status}`;
 
 
-     
+        //adding remove button
+        const removeBtn = document.createElement('button')
+        removeBtn.textContent = 'delete book'
+        removeBtn.addEventListener('click', () => removeBook(book.id))
 
         bookCard.appendChild(bookTitle)
         bookCard.appendChild(bookAuthor)
         bookCard.appendChild(bookStatus)
-       
+        bookCard.appendChild(removeBtn)
 
         library.appendChild(bookCard)
 
@@ -86,4 +89,13 @@ function displayBooks() {
 }
     
 
+function removeBook(bookId) {
+    const bookIndex = myLibrary.findIndex(book => book.id === bookId)
+
+    if (bookIndex !== -1) {
+        myLibrary.splice(bookIndex, 1)
+
+        displayBooks()
+    }
+}
 

@@ -46,6 +46,7 @@ label {
 
 #library{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book-card{
