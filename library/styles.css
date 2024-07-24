@@ -1,4 +1,4 @@
-form{
+form {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -8,27 +8,33 @@ form{
     margin-left: 300px;
     gap: 10px;
     border-radius: 10px;
-    
+
 }
 
-select{
+select {
     width: 100px;
     height: 20px;
     margin-left: 70px;
-    
-   
+
+
 }
-input{
+
+input {
     width: 500px;
     height: 30px;
     margin-left: 70px;
-    
+
 }
 
-label{
+label {
     margin-left: 70px;
 }
 
-#form{
+#form {
     display: none;
+}
+
+#addToLibrary {
+    width: 200px;
+    margin-left: 300px;
 }
